@@ -7,7 +7,8 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "reset-db": "ts-node src/scripts/resetDb.ts",
-    "trigger-cleanup": "ts-node src/scripts/triggerCleanup.ts"
+    "trigger-cleanup": "ts-node src/scripts/triggerCleanup.ts",
+    "test": "cross-env MONGOMS_DOWNLOAD_DIR=./.mongo-cache jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
@@ -47,6 +48,7 @@
     "@types/node": "^25.0.10",
     "@types/node-cron": "^3.0.11",
     "@types/uuid": "^10.0.0",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"

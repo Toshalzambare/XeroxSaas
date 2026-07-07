@@ -44,10 +44,6 @@ export const globalLimiter = rateLimit({
   message: { message: 'Too many requests, please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req) => {
-    // Use X-Forwarded-For if behind proxy (Docker/Nginx), fallback to IP
-    return (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.ip || 'unknown';
-  },
 });
 
 /**
@@ -60,9 +56,6 @@ export const authLimiter = rateLimit({
   message: { message: 'Too many login/register attempts. Please wait 15 minutes.' },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req) => {
-    return (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.ip || 'unknown';
-  },
 });
 
 /**
@@ -75,9 +68,6 @@ export const uploadLimiter = rateLimit({
   message: { message: 'Too many file uploads. Please wait before uploading more.' },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req) => {
-    return (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.ip || 'unknown';
-  },
 });
 
 /**
@@ -90,9 +80,6 @@ export const paymentLimiter = rateLimit({
   message: { message: 'Too many payment attempts. Please wait before retrying.' },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req) => {
-    return (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || req.ip || 'unknown';
-  },
 });
 
 // ─── Input Sanitization ─────────────────────────────────────────────
