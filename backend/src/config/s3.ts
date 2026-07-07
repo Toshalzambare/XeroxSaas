@@ -36,6 +36,8 @@ const initBucket = async () => {
   }
 };
 
-initBucket();
+if (process.env.NODE_ENV !== 'test') {
+  initBucket();
+}
 
 export default s3;
