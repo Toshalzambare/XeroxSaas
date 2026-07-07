@@ -18,13 +18,15 @@ const BCRYPT_ROUNDS = 12; // Increased from 10 for stronger hashing
 // @access  Public
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { name, email, password } = req.body;
+    let { name, email, password } = req.body;
 
     // 1. Validation
     if (!name || !email || !password) {
       res.status(400).json({ message: 'Please fill all fields' });
       return;
     }
+
+    email = email.trim().toLowerCase();
     
     // Name sanitization (prevent XSS via stored names)
     if (typeof name !== 'string' || name.length > 100) {
@@ -50,7 +52,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
     }
 
     // 2. Check if user exists
-    const userExists = await User.findOne({ email: email.toLowerCase().trim() });
+    const userExists = await User.findOne({ email });
     if (userExists) {
       res.status(400).json({ message: 'User already exists' });
       return;
