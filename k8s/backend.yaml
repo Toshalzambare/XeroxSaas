@@ -90,4 +90,6 @@ data:
   MINIO_ACCESS_KEY: "minioadmin"
   MINIO_SECRET_KEY: "minioadmin"
   S3_FORCE_PATH_STYLE: "true"
+  RAZORPAY_KEY_ID: "dummy_key_id"
+  RAZORPAY_KEY_SECRET: "dummy_key_secret"
   # Secrets like JWT_SECRET will be injected via SealedSecrets later
