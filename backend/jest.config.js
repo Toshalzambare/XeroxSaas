@@ -4,7 +4,7 @@ module.exports = {
   testEnvironment: 'node',
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.test.ts'],
-  setupFilesAfterSetup: [],
+  setupFilesAfterEnv: [],
   globalSetup: undefined,
   globalTeardown: undefined,
   // Use a separate tsconfig for tests
