@@ -86,4 +86,8 @@ data:
   PORT: "5000"
   MONGODB_URI: "mongodb://mongodb.xerox.svc.cluster.local:27017/xeroxsaas"
   REDIS_URL: "redis://redis.xerox.svc.cluster.local:6379"
+  MINIO_ENDPOINT: "http://minio.xerox.svc.cluster.local:9000"
+  MINIO_ACCESS_KEY: "minioadmin"
+  MINIO_SECRET_KEY: "minioadmin"
+  S3_FORCE_PATH_STYLE: "true"
   # Secrets like JWT_SECRET will be injected via SealedSecrets later
