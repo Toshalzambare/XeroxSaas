@@ -31,3 +31,5 @@ yarn-error.log*
 
 # Docker
 docker-data/
+.bin/
+backend/.mongo-cache/

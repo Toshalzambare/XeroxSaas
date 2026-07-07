@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/Toshalzambare/Anti-print.git'
-    targetRevision: HEAD
+    targetRevision: local-devops
     path: k8s
   destination:
     server: 'https://kubernetes.default.svc'
