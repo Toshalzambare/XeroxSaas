@@ -86,7 +86,7 @@ metadata:
 data:
   NODE_ENV: "production"
   PORT: "5000"
-  MONGODB_URI: "mongodb://mongodb.xerox.svc.cluster.local:27017/xeroxsaas"
+  MONGO_URI: "mongodb://mongodb.xerox.svc.cluster.local:27017/xeroxsaas"
   REDIS_URL: "redis://redis.xerox.svc.cluster.local:6379"
   MINIO_ENDPOINT: "http://minio.xerox.svc.cluster.local:9000"
   MINIO_ACCESS_KEY: "minioadmin"
