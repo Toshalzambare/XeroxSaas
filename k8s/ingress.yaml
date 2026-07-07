@@ -4,7 +4,7 @@ metadata:
   name: xerox-ingress
   namespace: xerox
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    # Removed rewrite-target: / because backend routes natively include /api
 spec:
   ingressClassName: nginx
   rules:
