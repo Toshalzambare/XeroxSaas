@@ -17,7 +17,7 @@ spec:
       - name: ghcr-login-secret
       containers:
       - name: frontend
-        image: ghcr.io/toshalzambare/anti-print-frontend:sha-6030266
+        image: ghcr.io/toshalzambare/anti-print-frontend:sha-088b19a
         imagePullPolicy: Always
         ports:
         - containerPort: 80
